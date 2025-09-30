@@ -1,0 +1,133 @@
+/* General Lavender Theme Styles */
+:root {
+    --primary: #B185DB; /* Lavender */
+    --primary-light: #E0BBE4; /* Soft Lilac */
+    --background: #FAF9F9; /* Pale Gray/White */
+    --text-color: #4B0082; /* Deep Violet */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif; /* Keep a common font for simplicity */
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: var(--text-color);
+    margin-bottom: 5rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid var(--primary);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary); /* Lavender background */
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5rem 2rem 0 var(--primary-light);
+    transform: translateY(-0.1rem);
+    background-color: var(--primary-light); /* Soft Lilac hover */
+    color: var(--text-color);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* FORMS */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+body {
+    /* Use a colorful CSS Gradient */
+    background: linear-gradient(135deg, #FAD0C4 0%, #FFD1FF 33%, #B185DB 66%, #ADD8E6 100%);
+    /* This gradient transitions from a soft peach to pink, then lavender, and finally light blue. */
+    background-size: 400% 400%; /* Important for the animation */
+    animation: gradientShift 15s ease infinite; /* Apply the animation */
+    min-height: 100vh; /* Ensure the gradient covers the whole viewport */
+}
+/* --- Keyframe Animation for Background Gradient --- */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

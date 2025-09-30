@@ -1,0 +1,120 @@
+/* General Game Page Lavender Theme Styles */
+:root {
+    --primary: #B185DB; /* Lavender */
+    --primary-light: #E0BBE4; /* Soft Lilac */
+    --background: #FAF9F9; /* Pale Gray/White */
+    --text-color: #4B0082; /* Deep Violet */
+    --correct-color: #C7E8CA; /* Light Green */
+    --incorrect-color: #F4C7C7; /* Light Red */
+}
+
+/* Inherits from app.css */
+
+#game {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    border-radius: 4px;
+    background: white;
+    border: 0.1rem solid var(--primary); /* Lavender border */
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.2rem 1.5rem 0 var(--primary-light);
+    transform: scale(1.02);
+    background-color: var(--primary-light); /* Soft Lilac hover background */
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: var(--primary); /* Lavender prefix background */
+    color: white;
+    border-right: 0.1rem solid var(--primary);
+    font-size: 2.5rem;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+/* Feedback Styling */
+.correct {
+    background-color: var(--correct-color); /* Light Green for Correct */
+}
+
+.incorrect {
+    background-color: var(--incorrect-color); /* Light Red for Incorrect */
+}
+
+/* HUD (Head-Up Display) */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.hud-main-text {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--text-color);
+}
+
+/* Progress Bar */
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.1rem solid var(--primary); /* Lavender border */
+    margin-top: 1.5rem;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#progressBarFull {
+    height: 100%;
+    background-color: var(--primary); /* Lavender fill */
+    width: 0%;
+}
+
+/* LOADER */
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+    /* Use a colorful CSS Gradient */
+    background: linear-gradient(135deg, #FAD0C4 0%, #FFD1FF 33%, #B185DB 66%, #ADD8E6 100%);
+    /* This gradient transitions from a soft peach to pink, then lavender, and finally light blue. */
+    background-size: 400% 400%; /* Important for the animation */
+    animation: gradientShift 15s ease infinite; /* Apply the animation */
+    min-height: 100vh; /* Ensure the gradient covers the whole viewport */
+}

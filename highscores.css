@@ -1,0 +1,86 @@
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+  transform: scale(1.025);
+}
+/* End Page Lavender Theme Styles */
+:root {
+    --primary: #B185DB;
+    --primary-light: #E0BBE4;
+    --background: #FAF9F9;
+    --text-color: #4B0082;
+}
+
+#finalScore {
+    color: var(--text-color);
+    font-size: 6rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--text-color);
+    background-color: white;
+    border: 1px solid var(--primary-light);
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* Inherits .btn styles from app.css */
+/* Highscores Page Lavender Theme Styles */
+:root {
+    --primary: #B185DB;
+    --primary-light: #E0BBE4;
+    --background: #FAF9F9;
+    --text-color: #4B0082;
+}
+
+#highScoreList {
+    list-style: none;
+    padding-left: 0;
+    color: var(--text-color);
+}
+
+.high-score {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light); /* Soft Lilac row background */
+    border-radius: 4px;
+    color: var(--text-color);
+    border-left: 0.5rem solid var(--primary); /* Lavender accent line */
+}
+
+/* Inherits .btn styles from app.css */
+body {
+    /* Use a colorful CSS Gradient */
+    background: linear-gradient(135deg, #FAD0C4 0%, #FFD1FF 33%, #B185DB 66%, #ADD8E6 100%);
+    /* This gradient transitions from a soft peach to pink, then lavender, and finally light blue. */
+    background-size: 400% 400%; /* Important for the animation */
+    animation: gradientShift 15s ease infinite; /* Apply the animation */
+    min-height: 100vh; /* Ensure the gradient covers the whole viewport */
+}
